@@ -1,17 +1,17 @@
-import type {Metadata} from "next";
-import {ProfileImage} from "@/app/(home)/components/profileImage";
-import {WelcomeMessage} from "@/app/(home)/components/welcomeMessage";
-import {Description} from "@/app/(home)/components/description";
-import {SocialLinks} from "@/app/(home)/components/socialLinks";
+import type { Metadata } from "next";
+import { ProfileImage } from "@/app/(home)/components/profileImage";
+import { WelcomeMessage } from "@/app/(home)/components/welcomeMessage";
+import { Description } from "@/app/(home)/components/description";
+import { SocialLinks } from "@/app/(home)/components/socialLinks";
 
 export const metadata: Metadata = {
-  title: `Home - ${process.env.PAGE_URL}`
-}
+  title: `Home - ${process.env.PAGE_URL}`,
+};
 
 export default function HomePage() {
   return (
     <div
-      className='
+      className="
       relative
       w-full
       grid grid-cols-[40%_60%] grid-rows-[40%_60%] gap-x-2
@@ -19,10 +19,10 @@ export default function HomePage() {
       justify-center
       my-auto
       px-5
-      '
+      "
     >
       <div
-        className='
+        className="
         max-sm:absolute
         max-sm:right-0
         max-sm:top-0
@@ -33,13 +33,13 @@ export default function HomePage() {
         sm:col-start-1
 
         self-end
-        -z-10'
+        -z-10"
       >
-        <ProfileImage/>
+        <ProfileImage />
       </div>
 
       <div
-        className='
+        className="
         col-start-1
         col-span-2
 
@@ -51,13 +51,13 @@ export default function HomePage() {
         sm:row-span-1
 
         px-2 sm:px-4
-        '
+        "
       >
-        <WelcomeMessage/>
+        <WelcomeMessage />
       </div>
 
       <div
-        className='
+        className="
         space-y-8
         row-start-2
         row-span-1
@@ -68,10 +68,10 @@ export default function HomePage() {
         sm:col-span-1
         sm:row-start-2
         sm:row-span-1
-        px-2 sm:px-4'
+        px-2 sm:px-4"
       >
-        <Description/>
-        <SocialLinks/>
+        <Description />
+        <SocialLinks />
       </div>
     </div>
   );

@@ -2,10 +2,10 @@
 export type PostYAMLFrontMatter = {
   title: string;
   date: string;
-}
+};
 
 export type Post = {
   slug: string;
-  data: PostYAMLFrontMatter
+  data: PostYAMLFrontMatter;
   content: string;
-}
+};
