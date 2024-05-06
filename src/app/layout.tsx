@@ -11,9 +11,6 @@ const poppins = Poppins({
   subsets: ["latin"],
 });
 
-// TODO: Think about metadata for each site - better SEO
-// TODO: Add analytics
-// TODO: Remember about babel + other tools for better accessibility and compatibility
 export const metadata: Metadata = {
   title: process.env.PAGE_URL,
   description: "Marek Pankowski's homepage",

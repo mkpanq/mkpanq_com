@@ -1,10 +1,11 @@
 import Image from "next/image";
-import ProfilePicture from "../../../../public/profile_memoji.png";
 
 export function ProfileImage() {
   return (
     <Image
-      src={ProfilePicture}
+      src="/profile_memoji.png"
+      width={420}
+      height={420}
       alt="mkpanq.com - My memoji :) "
       priority
       className="
