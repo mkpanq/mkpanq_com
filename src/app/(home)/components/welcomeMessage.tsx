@@ -1,3 +1,5 @@
+"use client";
+
 import { greetingsData } from "@/lib/presentation/greetings";
 import PageTitle from "@/components/shared/pageTitle";
 
