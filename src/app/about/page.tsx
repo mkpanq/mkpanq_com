@@ -18,7 +18,7 @@ export default function AboutPage() {
     <PageContentBox>
       <PageTitle title={PAGE_NAME} subtitle={subtitle} />
       <div className="flex flex-col md:flex-row gap-5 justify-center">
-        <div className="md:basis-1/3">
+        <div className="md:basis-1/3 grow-0">
           <Image
             src={ProfilePicture}
             alt="mkpanq.com - Hi, it's me !"
@@ -26,17 +26,19 @@ export default function AboutPage() {
             className="max-sm:max-h-[150px] max-md:max-h-[300px] w-full h-full object-cover rounded-xl"
           />
         </div>
-        <div className="md:basis-2/3 text-slate-200 text-justify sm:leading-loose leading-loose text-sm sm:text-lg overflow-scroll my-5">
+        <div className="md:basis-2/3 text-slate-200 text-justify overflow-scroll sm:leading-[2.1rem] sm:text-lg leading-6 text-sm">
           <p>
             Hi, I&apos;m Marek, a product developer from Warsaw, Poland,
-            passionate about creating sophisticated digital products. Over the
-            years, I have developed extensive experience in taking digital
-            products from conceptualization to initial release, contributing at
-            every stage of the development cycle. I&apos;ve had the opportunity
-            to work in both software houses and product companies, which has
-            allowed me to hone my skills in various areas of product
-            development, including UX/UI design, human-machine communication,
-            and end-to-end product delivery.
+            passionate about creating sophisticated digital products.
+          </p>
+          <p>
+            Over the years, I have developed extensive experience in taking
+            digital products from conceptualization to initial release,
+            contributing at every stage of the development cycle. I&apos;ve had
+            the opportunity to work in both software houses and product
+            companies, which has allowed me to hone my skills in various areas
+            of product development, including UX/UI design, human-machine
+            communication, and end-to-end product delivery.
           </p>
           <p>
             I love motorsports, particularly Formula 1, Playstation gaming and
