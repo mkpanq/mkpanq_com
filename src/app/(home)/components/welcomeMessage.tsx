@@ -1,14 +1,12 @@
 "use client";
 
-import { greetingsData } from "@/lib/presentation/greetings";
 import PageTitle from "@/components/shared/pageTitle";
+import useGreetings from "@/app/(home)/hooks";
 
 export function WelcomeMessage() {
-  const language =
-    Object.keys(greetingsData)[
-      Math.floor(Math.random() * Object.keys(greetingsData).length)
-    ];
-  const greetings = greetingsData[language] + " 👋";
+  const [language, greetings] = useGreetings();
 
-  return <PageTitle title={greetings} subtitle={`( ${language} )`} />;
+  return (
+    language && <PageTitle title={greetings} subtitle={`( ${language} )`} />
+  );
 }
