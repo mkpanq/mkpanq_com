@@ -5,7 +5,6 @@ import PostsList from "@/app/blog/components/postList";
 import PageContentBox from "@/components/shared/pageContentBox";
 import { Metadata } from "next";
 
-// TODO: Removing ?
 const PAGE_NAME = "Blog ✍️";
 
 export const metadata: Metadata = {
