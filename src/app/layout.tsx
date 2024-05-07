@@ -18,7 +18,8 @@ export const metadata: Metadata = {
   publisher: "Marek Pankowski",
   openGraph: {
     siteName: "mkpanq.com | Marek Pankowski",
-    description: "Marek Pankowski's personal website",
+    description:
+      "Personal Website of Marek Pankowski - Product Engineer & Creator from Poland",
     type: "website",
     locale: "en_US",
   },

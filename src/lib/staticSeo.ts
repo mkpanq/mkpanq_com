@@ -7,7 +7,7 @@ export default function staticPageMetadata(pageTitle: string): Metadata {
 
   return {
     title: `${pageName} | mkpanq.com | Marek Pankowski`,
-    description: `${pageName} | mkpanq.com - Marek Pankowski's personal page`,
+    description: `${pageName} | mkpanq.com - Personal Website of Marek Pankowski - Product Engineer & Creator from Poland`,
     keywords: [
       "marek",
       "pankowski",
