@@ -16,8 +16,10 @@ export function generateStaticParams(): { slug: string }[] {
   return postData.map((post) => ({ slug: post.slug }));
 }
 
-// Generate metadata for each blog post
 // TODO: Remember to add this when unifying data and adding keywords for Post model
+// TODO: Think about adding JSON-LD to post, blog and author pages
+
+// Generate metadata for each blog post
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const blogPost: Post = findBlogPost(params.slug);
 
