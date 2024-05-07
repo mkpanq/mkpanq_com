@@ -1,12 +1,7 @@
-import type { Metadata } from "next";
 import { ProfileImage } from "@/app/(home)/components/profileImage";
 import { WelcomeMessage } from "@/app/(home)/components/welcomeMessage";
 import { Description } from "@/app/(home)/components/description";
 import { SocialLinks } from "@/app/(home)/components/socialLinks";
-
-export const metadata: Metadata = {
-  title: `Home - ${process.env.PAGE_URL}`,
-};
 
 export default function HomePage() {
   return (

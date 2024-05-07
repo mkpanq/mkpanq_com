@@ -1,15 +1,11 @@
-import type { Metadata } from "next";
 import PageTitle from "@/components/shared/pageTitle";
 import PageContentBox from "@/components/shared/pageContentBox";
 import ProfilePicture from "../../../public/profile_picture.jpeg";
 import Image from "next/image";
 
+// TODO: Removing ?
 const PAGE_NAME = "About me 💁‍♂️";
 const LAST_UPDATE_DATE = "30-04-2024";
-
-export const metadata: Metadata = {
-  title: `${PAGE_NAME} - ${process.env.PAGE_URL}`,
-};
 
 export default function AboutPage() {
   const subtitle = `Last update: ${LAST_UPDATE_DATE}`;

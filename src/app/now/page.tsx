@@ -1,14 +1,10 @@
-import type { Metadata } from "next";
 import PageTitle from "@/components/shared/pageTitle";
 import Link from "next/link";
 import PageContentBox from "@/components/shared/pageContentBox";
 
+// TODO: Removing ?
 const PAGE_NAME = "Now ⏳";
 const LAST_UPDATE_DATE = "30-04-2024";
-
-export const metadata: Metadata = {
-  title: `${PAGE_NAME} - ${process.env.PAGE_URL}`,
-};
 
 export default function NowPage() {
   const subtitle = `Last update: ${LAST_UPDATE_DATE}`;
