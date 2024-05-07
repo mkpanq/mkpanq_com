@@ -13,11 +13,11 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mkpanq.com"),
-  applicationName: "Home | Marek Pankowski",
+  applicationName: "mkpanq.com | Marek Pankowski",
   creator: "Marek Pankowski",
   publisher: "Marek Pankowski",
   openGraph: {
-    siteName: "Home | Marek Pankowski",
+    siteName: "mkpanq.com | Marek Pankowski",
     description: "Marek Pankowski's personal website",
     type: "website",
     locale: "en_US",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     },
   },
   appleWebApp: {
-    title: "Home | Marek Pankowski",
+    title: "mkpanq.com | Marek Pankowski",
     statusBarStyle: "black-translucent",
     capable: true,
   },
