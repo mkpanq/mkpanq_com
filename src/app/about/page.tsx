@@ -2,10 +2,58 @@ import PageTitle from "@/components/shared/pageTitle";
 import PageContentBox from "@/components/shared/pageContentBox";
 import ProfilePicture from "../../../public/profile_picture.jpeg";
 import Image from "next/image";
+import { Metadata } from "next";
 
 // TODO: Removing ?
 const PAGE_NAME = "About me 💁‍♂️";
 const LAST_UPDATE_DATE = "30-04-2024";
+
+export const metadata: Metadata = {
+  title: "About | mkpanq.com | Marek Pankowski",
+  description: "About | mkpanq.com - Marek Pankowski's personal page",
+  keywords: [
+    "marek",
+    "pankowski",
+    "marek pankowski",
+    "mkpanq",
+    "mkpanq.com",
+    "panq",
+    "panq digital",
+    "digital",
+  ],
+  openGraph: {
+    url: "https://mkpanq.com/about",
+    type: "website",
+    title: "About | mkpanq.com | Marek Pankowski",
+    description: "About | mkpanq.com - Marek Pankowski's personal page",
+    images: [
+      {
+        url: "https://dynamic-og-image-generator.vercel.app/api/generate?title=About&author=Marek+Pankowski&websiteUrl=https%3A%2F%2Fmkpanq.com&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F17934750&theme=nightOwl",
+        width: 1200,
+        height: 630,
+        alt: "mkpanq.com/about",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About | mkpanq.com | Marek Pankowski",
+    description: "About | mkpanq.com - Marek Pankowski's personal page",
+    creator: "@mkpanq",
+    site: "@mkpanq",
+    images: [
+      {
+        url: "https://dynamic-og-image-generator.vercel.app/api/generate?title=About&author=Marek+Pankowski&websiteUrl=https%3A%2F%2Fmkpanq.com&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F17934750&theme=nightOwl",
+        width: 1200,
+        height: 630,
+        alt: "mkpanq.com/about",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://mkpanq.com/about",
+  },
+};
 
 export default function AboutPage() {
   const subtitle = `Last update: ${LAST_UPDATE_DATE}`;
