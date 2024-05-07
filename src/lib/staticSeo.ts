@@ -25,7 +25,7 @@ export default function staticPageMetadata(pageTitle: string): Metadata {
       description: `${pageName} | mkpanq.com - Marek Pankowski's personal page`,
       images: [
         {
-          url: `https://dynamic-og-image-generator.vercel.app/api/generate?title=${pageName}&author=Marek+Pankowski&websiteUrl=https%3A%2F%2Fmkpanq.com&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F17934750&theme=nightOwl`,
+          url: `https://dynamic-og-image-generator.vercel.app/api/generate?title=${pageName}&author=Marek+Pankowski&websiteUrl=https%3A%2F%2Fmkpanq.com%2F${pageUrl}&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F17934750&theme=nightOwl`,
           width: 1200,
           height: 630,
           alt: `mkpanq.com/${pageUrl}`,
