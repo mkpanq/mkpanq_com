@@ -2,56 +2,12 @@ import PageTitle from "@/components/shared/pageTitle";
 import Link from "next/link";
 import PageContentBox from "@/components/shared/pageContentBox";
 import { Metadata } from "next";
+import staticPageMetadata from "@/lib/staticSeo";
 
 const PAGE_NAME = "Now ⏳";
 const LAST_UPDATE_DATE = "30-04-2024";
 
-export const metadata: Metadata = {
-  title: "Now | mkpanq.com | Marek Pankowski",
-  description: "Now | mkpanq.com - Marek Pankowski's personal page",
-  keywords: [
-    "marek",
-    "pankowski",
-    "marek pankowski",
-    "mkpanq",
-    "mkpanq.com",
-    "panq",
-    "panq digital",
-    "digital",
-  ],
-  openGraph: {
-    url: "https://mkpanq.com/now",
-    type: "website",
-    title: "Now | mkpanq.com | Marek Pankowski",
-    description: "Now | mkpanq.com - Marek Pankowski's personal page",
-    images: [
-      {
-        url: "https://dynamic-og-image-generator.vercel.app/api/generate?title=Now&author=Marek+Pankowski&websiteUrl=https%3A%2F%2Fmkpanq.com&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F17934750&theme=nightOwl",
-        width: 1200,
-        height: 630,
-        alt: "mkpanq.com/now",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Now | mkpanq.com | Marek Pankowski",
-    description: "Now | mkpanq.com - Marek Pankowski's personal page",
-    creator: "@mkpanq",
-    site: "@mkpanq",
-    images: [
-      {
-        url: "https://dynamic-og-image-generator.vercel.app/api/generate?title=Now&author=Marek+Pankowski&websiteUrl=https%3A%2F%2Fmkpanq.com&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F17934750&theme=nightOwl",
-        width: 1200,
-        height: 630,
-        alt: "mkpanq.com/Now",
-      },
-    ],
-  },
-  alternates: {
-    canonical: "https://mkpanq.com/now",
-  },
-};
+export const metadata: Metadata = staticPageMetadata("Now");
 
 export default function NowPage() {
   const subtitle = `Last update: ${LAST_UPDATE_DATE}`;
