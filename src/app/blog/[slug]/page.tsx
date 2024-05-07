@@ -4,6 +4,7 @@ import PageTitle from "@/components/shared/pageTitle";
 import PostPageContent from "@/app/blog/components/postPage";
 import PageContentBox from "@/components/shared/pageContentBox";
 import { Metadata } from "next";
+import getPostsSlugs from "@/lib/posts/getPostsSlugs";
 
 type Props = {
   params: { slug: string };
@@ -12,8 +13,8 @@ type Props = {
 // Generate static routes for each blog post
 export const dynamicParams = false;
 export function generateStaticParams(): { slug: string }[] {
-  const postData = getPostsList();
-  return postData.map((post) => ({ slug: post.slug }));
+  const slugs: string[] = getPostsSlugs();
+  return slugs.map((slug) => ({ slug: slug }));
 }
 
 // TODO: Remember to add this when unifying data and adding keywords for Post model
