@@ -4,7 +4,6 @@ import ProfilePicture from "../../../public/profile_picture.jpeg";
 import Image from "next/image";
 import { Metadata } from "next";
 
-// TODO: Removing ?
 const PAGE_NAME = "About me 💁‍♂️";
 const LAST_UPDATE_DATE = "30-04-2024";
 
