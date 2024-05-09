@@ -1,4 +1,4 @@
-import { Post } from "@/lib/posts/post.type";
+import { Post } from "@/app/blog/_lib/post.type";
 import { Metadata } from "next";
 
 export default function generatePostMetadata(post: Post): Metadata {

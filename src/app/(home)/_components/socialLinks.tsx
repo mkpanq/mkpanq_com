@@ -1,4 +1,4 @@
-import { Socials } from "@/lib/presentation/socials";
+import { Socials } from "@/app/(home)/_lib/data/socials";
 import Link from "next/link";
 
 export function SocialLinks() {

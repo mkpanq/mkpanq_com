@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "node:path";
-import { POSTS_FOLDER_PATH } from "@/lib/posts/helpers/constants";
-import { Post, PostMetadata } from "@/lib/posts/post.type";
+import { POSTS_FOLDER_PATH } from "@/app/blog/_lib/helpers/constants";
+import { Post, PostMetadata } from "@/app/blog/_lib/post.type";
 import matter from "gray-matter";
 
 export function postMarkdownFileParser(fileName: string): Post | {} {

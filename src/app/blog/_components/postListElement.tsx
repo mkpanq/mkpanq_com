@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Post } from "@/lib/posts/post.type";
+import { Post } from "@/app/blog/_lib/post.type";
 
 export default function PostListElement({ post }: { post: Post }) {
   const postUrl = `/blog/${post.slug}`;

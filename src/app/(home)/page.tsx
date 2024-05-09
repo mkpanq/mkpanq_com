@@ -1,6 +1,6 @@
-import { ProfileImage } from "@/app/(home)/components/profileImage";
-import { WelcomeMessage } from "@/app/(home)/components/welcomeMessage";
-import { SocialLinks } from "@/app/(home)/components/socialLinks";
+import { ProfileImage } from "@/app/(home)/_components/profileImage";
+import { WelcomeMessage } from "@/app/(home)/_components/welcomeMessage";
+import { SocialLinks } from "@/app/(home)/_components/socialLinks";
 import { Metadata } from "next";
 import staticPageMetadata from "@/lib/staticSeo";
 

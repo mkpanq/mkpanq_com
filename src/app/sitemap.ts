@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
-import { getAllPosts } from "@/lib/posts/post.service";
-import { Post } from "@/lib/posts/post.type";
+import { getAllPosts } from "@/app/blog/_lib/post.service";
+import { Post } from "@/app/blog/_lib/post.type";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [

@@ -1,10 +1,10 @@
 import { Metadata } from "next";
-import { getAllPosts } from "@/lib/posts/post.service";
+import { getAllPosts } from "@/app/blog/_lib/post.service";
 import PageContentBox from "@/components/shared/pageContentBox";
 import PageTitle from "@/components/shared/pageTitle";
-import { Post } from "@/lib/posts/post.type";
-import PostPageContent from "@/app/blog/components/postPageContent";
-import generatePostMetadata from "@/lib/posts/post.seo";
+import { Post } from "@/app/blog/_lib/post.type";
+import PostPageContent from "@/app/blog/_components/postPageContent";
+import generatePostMetadata from "@/app/blog/_lib/post.seo";
 
 type PageProps = {
   params: { slug: string };

@@ -1,5 +1,5 @@
 import fs from "fs";
-import { POSTS_FOLDER_PATH } from "@/lib/posts/helpers/constants";
+import { POSTS_FOLDER_PATH } from "@/app/blog/_lib/helpers/constants";
 
 export function getAllPostsFilenames(): string[] {
   try {

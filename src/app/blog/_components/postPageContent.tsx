@@ -1,6 +1,6 @@
 import { remark } from "remark";
 import html from "remark-html";
-import { Post } from "@/lib/posts/post.type";
+import { Post } from "@/app/blog/_lib/post.type";
 
 export default async function PostPageContent({
   postContent,

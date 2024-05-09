@@ -1,10 +1,10 @@
 import PageTitle from "@/components/shared/pageTitle";
-import PostsList from "@/app/blog/components/postList";
+import PostsList from "@/app/blog/_components/postList";
 import PageContentBox from "@/components/shared/pageContentBox";
 import { Metadata } from "next";
 import staticPageMetadata from "@/lib/staticSeo";
-import { Post } from "@/lib/posts/post.type";
-import { getAllPosts } from "@/lib/posts/post.service";
+import { Post } from "@/app/blog/_lib/post.type";
+import { getAllPosts } from "@/app/blog/_lib/post.service";
 
 const PAGE_NAME = "Blog ✍️";
 
