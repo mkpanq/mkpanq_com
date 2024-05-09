@@ -1,5 +1,6 @@
-import getPostsSlugs from "@/lib/posts/getPostsSlugs";
 import { MetadataRoute } from "next";
+import { getAllPosts } from "@/lib/posts/post.service";
+import { Post } from "@/lib/posts/post.type";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
@@ -29,14 +30,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  const blogPosts: MetadataRoute.Sitemap = getPostsSlugs().map(
-    (slug: string) => ({
-      url: `https://mkpanq.com/blog/${slug}`,
-      lastModified: new Date(),
-      changeFrequency: "daily",
-      priority: 0.6,
-    }),
-  );
+  const blogPosts: MetadataRoute.Sitemap = getAllPosts().map((post: Post) => ({
+    url: `https://mkpanq.com/blog/${post.slug}`,
+    lastModified: post.metadata.publishDate,
+    changeFrequency: "daily",
+    priority: 0.6,
+  }));
 
   return [...staticPages, ...blogPosts];
 }
