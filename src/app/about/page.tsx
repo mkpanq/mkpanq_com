@@ -4,14 +4,15 @@ import ProfilePicture from "../../../public/profile_picture.jpeg";
 import Image from "next/image";
 import { Metadata } from "next";
 import staticPageMetadata from "@/lib/staticSeo";
+import { parseDate } from "@/lib/utils";
 
 const PAGE_NAME = "About me 💁‍♂️";
-const LAST_UPDATE_DATE = "30-04-2024";
+const LAST_UPDATE_DATE = "2024-05-09";
 
 export const metadata: Metadata = staticPageMetadata("About");
 
 export default function AboutPage() {
-  const subtitle = `Last update: ${LAST_UPDATE_DATE}`;
+  const subtitle = `Last update: ${parseDate(LAST_UPDATE_DATE)}`;
 
   return (
     <PageContentBox>

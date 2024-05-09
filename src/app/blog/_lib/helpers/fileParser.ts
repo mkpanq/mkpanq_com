@@ -3,6 +3,7 @@ import path from "node:path";
 import { POSTS_FOLDER_PATH } from "@/app/blog/_lib/helpers/constants";
 import { Post, PostMetadata } from "@/app/blog/_lib/post.type";
 import matter from "gray-matter";
+import { parseDate } from "@/lib/utils";
 
 export function postMarkdownFileParser(fileName: string): Post | {} {
   const dataBuffer = getDataBuffer(fileName);
@@ -31,12 +32,7 @@ function parseMetadata(
   const rawMetadata = parsedBuffer.data;
 
   return {
-    publishDate: new Date(rawMetadata.publishDate).toLocaleDateString("en-gb", {
-      weekday: "long",
-      year: "numeric",
-      month: "long",
-      day: "2-digit",
-    }),
+    publishDate: parseDate(rawMetadata.publishDate),
     title: rawMetadata.title,
     description: rawMetadata.description || "",
     tags: rawMetadata.tags || [],

@@ -3,14 +3,15 @@ import Link from "next/link";
 import PageContentBox from "@/components/shared/pageContentBox";
 import { Metadata } from "next";
 import staticPageMetadata from "@/lib/staticSeo";
+import { parseDate } from "@/lib/utils";
 
 const PAGE_NAME = "Now ⏳";
-const LAST_UPDATE_DATE = "30-04-2024";
+const LAST_UPDATE_DATE = "2024-05-09";
 
 export const metadata: Metadata = staticPageMetadata("Now");
 
 export default function NowPage() {
-  const subtitle = `Last update: ${LAST_UPDATE_DATE}`;
+  const subtitle = `Last update: ${parseDate(LAST_UPDATE_DATE)}`;
 
   return (
     <PageContentBox>
