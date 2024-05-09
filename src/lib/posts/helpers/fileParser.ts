@@ -8,16 +8,21 @@ export function postMarkdownFileParser(fileName: string): Post | {} {
   const dataBuffer = getDataBuffer(fileName);
 
   const slug = parseSlug(fileName);
-  const parsedDataBuffer = matter(dataBuffer);
+  try {
+    const parsedDataBuffer = matter(dataBuffer);
 
-  const metadata: PostMetadata = parseMetadata(parsedDataBuffer);
-  const content = parsedDataBuffer.content;
+    const metadata: PostMetadata = parseMetadata(parsedDataBuffer);
+    const content = parsedDataBuffer.content;
 
-  return {
-    slug: slug,
-    content: content,
-    metadata: metadata,
-  };
+    return {
+      slug: slug,
+      content: content,
+      metadata: metadata,
+    };
+  } catch (error) {
+    console.error(`Error while parsing file ${fileName}: ${error}`);
+    return {};
+  }
 }
 
 function parseMetadata(
