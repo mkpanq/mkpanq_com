@@ -1,15 +1,15 @@
-import { remark } from "remark";
-import html from "remark-html";
-import { Post } from "@/app/blog/_lib/post.type";
+import { Post, PostMetadata } from "@/app/blog/_lib/post.type";
+import convertMarkdownToHTML from "@/app/blog/_lib/helpers/contentTransformer";
 
 export default async function PostPageContent({
   description,
   postContent,
 }: {
-  description: Post["metadata"]["description"];
+  description: PostMetadata["description"];
   postContent: Post["content"];
 }) {
   const htmlData = await convertMarkdownToHTML(postContent);
+
   return (
     <>
       <p
@@ -37,9 +37,4 @@ export default async function PostPageContent({
       />
     </>
   );
-}
-
-async function convertMarkdownToHTML(postContent: Post["content"]) {
-  const processedContent = await remark().use(html).process(postContent);
-  return { __html: processedContent.toString() };
 }
