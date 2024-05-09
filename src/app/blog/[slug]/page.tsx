@@ -38,7 +38,10 @@ export default function PostPage({ params }: PageProps) {
         title={post.metadata.title}
         subtitle={post.metadata.publishDate}
       />
-      <PostPageContent postContent={post.content} />
+      <PostPageContent
+        postContent={post.content}
+        description={post.metadata.description}
+      />
     </PageContentBox>
   );
 }
