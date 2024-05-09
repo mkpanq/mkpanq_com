@@ -1,82 +1,45 @@
-import getPostsList from "@/lib/posts/getPostsList";
-import { Post } from "@/lib/posts/post";
-import PageTitle from "@/components/shared/pageTitle";
-import PostPageContent from "@/app/blog/components/postPage";
-import PageContentBox from "@/components/shared/pageContentBox";
 import { Metadata } from "next";
-import getPostsSlugs from "@/lib/posts/getPostsSlugs";
+import { getAllPosts } from "@/lib/posts/post.service";
+import PageContentBox from "@/components/shared/pageContentBox";
+import PageTitle from "@/components/shared/pageTitle";
+import { Post } from "@/lib/posts/post.type";
+import PostPageContent from "@/app/blog/components/postPageContent";
+import generatePostMetadata from "@/lib/posts/post.seo";
 
-type Props = {
+type PageProps = {
   params: { slug: string };
 };
+
+const allPostsData = getAllPosts();
+const getPostBySlug = (slug: string) =>
+  allPostsData.find((post) => post.slug === slug) as Post;
 
 // Generate static routes for each blog post
 export const dynamicParams = false;
 export function generateStaticParams(): { slug: string }[] {
-  const slugs: string[] = getPostsSlugs();
-  return slugs.map((slug) => ({ slug: slug }));
+  return allPostsData.map((post) => ({ slug: post.slug }));
 }
 
-// TODO: Remember to add this when unifying data and adding keywords for Post model
 // TODO: Think about adding JSON-LD to post, blog and author pages
-
 // Generate metadata for each blog post
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const blogPost: Post = findBlogPost(params.slug);
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const blogPost: Post = getPostBySlug(params.slug);
 
-  return {
-    title: `${blogPost.data.title} | mkpanq.com`,
-    authors: [
-      {
-        name: "Marek Pankowski",
-      },
-    ],
-    openGraph: {
-      title: `${blogPost.data.title} | mkpanq.com`,
-      type: "article",
-      url: `https://mkpanq.com/blog/${blogPost.slug}`,
-      publishedTime: blogPost.data.date,
-      authors: ["https://mkpanq.com/about"],
-      images: [
-        {
-          url: `https://dynamic-og-image-generator.vercel.app/api/generate?title=${blogPost.data.title}&author=Marek+Pankowski&websiteUrl=https%3A%2F%2Fmkpanq.com%2Fblog%2F${blogPost.slug}&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F17934750&theme=nightOwl`,
-          width: 1200,
-          height: 630,
-          alt: `mkpanq.com/blog/${blogPost.slug}`,
-        },
-      ],
-    },
-    twitter: {
-      card: "summary_large_image",
-      site: "@mkpanq",
-      creator: "@mkpanq",
-      title: `${blogPost.data.title} | mkpanq.com`,
-      images: [
-        {
-          url: `https://dynamic-og-image-generator.vercel.app/api/generate?title=${blogPost.data.title}&author=Marek+Pankowski&websiteUrl=https%3A%2F%2Fmkpanq.com%2Fblog%2F${blogPost.slug}&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F17934750&theme=nightOwl`,
-          width: 1200,
-          height: 630,
-          alt: `mkpanq.com/blog/${blogPost.slug}`,
-        },
-      ],
-    },
-    alternates: {
-      canonical: `https://mkpanq.com/blog/${blogPost.slug}`,
-    },
-  };
+  return generatePostMetadata(blogPost);
 }
 
-export default function PostPage({ params }: Props) {
-  const blogPost: Post = findBlogPost(params.slug);
+export default function PostPage({ params }: PageProps) {
+  const post: Post = getPostBySlug(params.slug);
 
   return (
     <PageContentBox>
-      <PageTitle title={blogPost.data.title} subtitle={blogPost.data.date} />
-      <PostPageContent postContent={blogPost.content} />
+      <PageTitle
+        title={post.metadata.title}
+        subtitle={post.metadata.publishDate}
+      />
+      <PostPageContent postContent={post.content} />
     </PageContentBox>
   );
-}
-
-function findBlogPost(slug: string): Post {
-  return getPostsList().find((post) => post.slug === slug) as Post;
 }

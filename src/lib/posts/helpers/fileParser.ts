@@ -31,7 +31,12 @@ function parseMetadata(
   const rawMetadata = parsedBuffer.data;
 
   return {
-    publishDate: new Date(rawMetadata.date),
+    publishDate: new Date(rawMetadata.date).toLocaleDateString("en-gb", {
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "2-digit",
+    }),
     title: rawMetadata.title,
     description: rawMetadata.description || "",
     tags: rawMetadata.tags || [],

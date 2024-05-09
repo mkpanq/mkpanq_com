@@ -1,5 +1,5 @@
-import { Post } from "@/lib/posts/post";
 import PostListElement from "@/app/blog/components/postListElement";
+import { Post } from "@/lib/posts/post.type";
 
 export default function PostsList({ allPostsList }: { allPostsList: Post[] }) {
   return (

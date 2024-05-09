@@ -1,5 +1,5 @@
 export type PostMetadata = {
-  publishDate: Date;
+  publishDate: string;
   title: string;
   description?: string;
   tags?: string[];
