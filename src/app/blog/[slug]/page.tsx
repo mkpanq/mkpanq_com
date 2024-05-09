@@ -20,7 +20,6 @@ export function generateStaticParams(): { slug: string }[] {
   return allPostsData.map((post) => ({ slug: post.slug }));
 }
 
-// TODO: Think about adding JSON-LD to post, blog and author pages
 // Generate metadata for each blog post
 export async function generateMetadata({
   params,

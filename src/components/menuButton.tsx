@@ -11,7 +11,6 @@ export default function MenuButton() {
     setIsOpen(!isOpen);
   };
 
-  // TODO: Try to add animation
   return (
     <div className="sm:hidden">
       <ActionButton handleClickMethod={handleClick} label="Menu" />

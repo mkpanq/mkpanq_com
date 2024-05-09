@@ -1,6 +1,7 @@
 import { Post } from "@/app/blog/_lib/post.type";
 import { Metadata } from "next";
 
+// TODO: Think about adding JSON-LD to post, blog and author pages
 export default function generatePostMetadata(post: Post): Metadata {
   return {
     title: `${post.metadata.title} | mkpanq.com`,
