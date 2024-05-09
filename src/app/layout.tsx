@@ -5,6 +5,8 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import MenuButton from "@/components/menuButton";
 import { Metadata } from "next";
+import { GoogleAnalytics } from "@next/third-parties/google";
+import { envVars } from "@/lib/envSchema";
 
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -127,6 +129,7 @@ export default function RootLayout({
           </div>
         </main>
       </body>
+      <GoogleAnalytics gaId={envVars.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID} />
     </html>
   );
 }
