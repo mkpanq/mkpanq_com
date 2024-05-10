@@ -26,7 +26,7 @@ So I’ve decided  - f&$%k it. If I can’t create the perfect product in privat
 
 So here were are. The homepage you’re visiting currently is my first “child”. NextJS, Typerscript, Tailwind, and other cool, trendy front-end stuff. I’m very proud of it, during that process I really liked the NextJS environment and it’s related community.
 
-I decided to create more. In public, trying to keep you updated about everything I’ve done - project, improvements, my thoughts, etc. [Learn in public](https://www.swyx.io/learn-in-public). Fail, show, discuss, get feedback, improve. The more I’m in this loop, the more I’m sure that’s the proper way to learn and build new things. You’ll never be perfect. Start small and grow. At your own pace. Make this progress satisfying. I’m curious how it will turn out, but to be honest, this is the first time when I have approached that “perfectionism” problem with a fresh head. So there is a chance to keep it up!
+I decided to create more. In public, trying to keep you updated about everything I’ve done - project, improvements, my thoughts, etc. [Learn in public](https://www.swyx.io/learn-in-public). Fail, show, discuss, get feedback, improve. The more I’m in this loop, the more I’m sure that’s the proper way to learn and build new things. You’ll never be perfect. Start small and grow. At your own pace. Make this progress satisfying. I’m curious how it will turn out, but to be honest, this is the first time when I have approached that “perfectionism” problem with a completely different attitude. So there is a chance to keep it up!
 
 I feel this pivot was a very good move. I hope I’ll write (maybe talk?) to you soon.
 
