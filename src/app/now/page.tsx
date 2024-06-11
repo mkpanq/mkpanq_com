@@ -25,11 +25,8 @@ export default function NowPage() {
         </Link>
         <p>
           I&apos;m currently on sabbatical to take a career break and focus on
-          my health. I&apos;m enhancing my skill set by diving more into
-          frontend technologies while leveraging my background in backend
-          development. Over the coming weeks, I plan to unveil some of the
-          projects I&apos;m actively engaged in. Additionally, in keeping with
-          the{" "}
+          my health. I&apos;m focusing on Typescript Full-Stack application
+          development. Additionally, in keeping with the{" "}
           <Link
             href="https://www.swyx.io/learn-in-public"
             className="text-california-900 italic"
@@ -37,7 +34,7 @@ export default function NowPage() {
             learning in public
           </Link>{" "}
           philosophy, I&apos;ll be regularly posting blog posts, or video
-          updates about my progress on these projects.
+          updates about my progress on my pet projects.
         </p>
       </div>
     </PageContentBox>
