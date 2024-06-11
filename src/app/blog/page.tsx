@@ -12,7 +12,6 @@ export const metadata: Metadata = staticPageMetadata("Blog");
 
 export default function BlogPage() {
   const allPostsList: Post[] = getAllPosts();
-
   return (
     <PageContentBox>
       <PageTitle title={PAGE_NAME} />

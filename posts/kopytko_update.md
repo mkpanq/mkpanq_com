@@ -21,8 +21,6 @@ Well… yes. But actually **no**.
 Being too ambitious and trying to polish every small aspect of code, instead of just writing the simplest business logic and ship it, striked again. In addition, trying to figure out some things with Hono, Drizzle, and other frameworks to make this solution as perfect as possible led to 3 week of coding without ANY ready solution. That led to anxiety, boredom, and general tiredness of this project. I’ve decided to abandon this project, leave it for a while, and try to take care of something else.
 But I already knew, what possible outcome of it would be like - another quitting.
 
-![something like that...](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ51hI4dqS2nQPmd13NqPs6vPkByVY7kD8xaA&s)
-
 That’s why… Kopytko became something. And nothing at the same time. Just a “scratchpad repo”, with example implementations of Turborepo project architecture with well-known frameworks and libraries.
 Scratchpad repo - that’s how I called it. And make it public. Added readme file started like this:
 
