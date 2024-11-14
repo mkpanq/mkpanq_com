@@ -1,5 +1,5 @@
 import Link from "next/link";
-import socials from "./lib/socials";
+import socials from "../lib/socials";
 
 export default function Home() {
   return (
@@ -33,7 +33,7 @@ export default function Home() {
       <p className="text-xl xl:text-2xl font-medium mt-5">
         Let&apos;s work with me !
       </p>
-      <ul className="flex max-sm:flex-col gap-6 text-xl xl:text-2xl">
+      <ul className="flex max-sm:flex-col gap-6 text-xl xl:text-2xl mb-48">
         {socials.map((social) => (
           <li key={social.name}>
             <Link href={social.url} target="_blank">
@@ -42,6 +42,14 @@ export default function Home() {
           </li>
         ))}
       </ul>
+      <footer className="text-xs xl:text-sm font-thin text-center">
+        <p>
+          © {new Date().getFullYear()} Marek Pankowski. All rights reserved.{" "}
+          <br />
+          Built with <a href="https://nextjs.org/">Next.js</a> and{" "}
+          <a href="https://tailwindcss.com/">Tailwind CSS</a>.
+        </p>
+      </footer>
     </div>
   );
 }

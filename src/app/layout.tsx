@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Urbanist } from "next/font/google";
 import "./globals.css";
-import { GoogleAnalytics } from "@next/third-parties/google";
 
 const urbanist = Urbanist({
   subsets: ["latin"],
@@ -20,6 +19,14 @@ export const metadata: Metadata = {
       "Marek Pankowski personal website - Full Stack Product Engineer from Poland",
     type: "website",
     locale: "en_US",
+    images: [
+      {
+        url: `https://dynamic-og-image-generator.vercel.app/api/generate?title=Home&author=Marek+Pankowski&websiteUrl=https%3A%2F%2Fmkpanq.com%2F&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F17934750&theme=default`,
+        width: 1200,
+        height: 630,
+        alt: `mkpanq.com`,
+      },
+    ],
   },
   robots: {
     index: true,
@@ -37,15 +44,6 @@ export const metadata: Metadata = {
     statusBarStyle: "black-translucent",
     capable: true,
   },
-  // TODO: For later
-  // verification: {
-  //   google: "YOUR_DATA",
-  //   yandex: ["YOUR_DATA"],
-  //   other: {
-  //     "msvalidate.01": ["YOUR_DATA"],
-  //     "facebook-domain-verification": ["YOUR_DATA"],
-  //   },
-  // },
   icons: {
     icon: [
       {
@@ -101,7 +99,6 @@ export default function RootLayout({
       >
         {children}
       </body>
-      <GoogleAnalytics gaId="G-TWXV4BYCCL" />
     </html>
   );
 }
