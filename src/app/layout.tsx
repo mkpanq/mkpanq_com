@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     siteName: "mkpanq.com | Marek Pankowski",
     description:
-      "Marek Pankowski personal website of - Full Stack Product Engineer from Poland",
+      "Marek Pankowski personal website - Full Stack Product Engineer from Poland",
     type: "website",
     locale: "en_US",
   },
@@ -101,9 +101,7 @@ export default function RootLayout({
       >
         {children}
       </body>
-      <GoogleAnalytics
-        gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID || ""}
-      />
+      <GoogleAnalytics gaId="G-TWXV4BYCCL" />
     </html>
   );
 }

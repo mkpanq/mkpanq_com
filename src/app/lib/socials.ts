@@ -20,6 +20,10 @@ const socials: SocialLink[] = [
     name: "twitch",
     url: "https://twitch.tv/mkpanq",
   },
+  {
+    name: "bluesky",
+    url: "https://bsky.app/profile/mkpanq.bsky.social",
+  },
 ];
 
 export default socials;
