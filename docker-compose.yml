@@ -4,7 +4,7 @@ name: "mkpanq"
 
 services:
   os_base:
-    image: os_base:latest
+    image: local/os_base:latest
     build:
       context: .
       dockerfile: Dockerfile.base
