@@ -4,17 +4,16 @@ name: "mkpanq"
 
 services:
   os_base:
-    image: os_base
+    image: os_base:latest
     build:
       context: .
       dockerfile: Dockerfile.base
-
   app:
-    image: app
+    image: app:latest
     build:
       context: .
       dockerfile: Dockerfile.app
     ports:
       - 3000:3000
     depends_on:
-      os_base: service_started
+      - os_base
