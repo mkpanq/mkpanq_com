@@ -1,0 +1,20 @@
+version: "3.9"
+
+name: "mkpanq"
+
+services:
+  os_base:
+    build:
+      context: .
+      dockerfile: Dockerfile.base
+    image: os_base
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.app
+    ports:
+      - 3000:3000
+    depends_on:
+      - os_base
+    image: app
