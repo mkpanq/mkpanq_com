@@ -4,6 +4,7 @@ name: "mkpanq"
 
 services:
   os_base:
+    pull-policy: if_not_present
     build:
       context: .
       dockerfile: Dockerfile.base
