@@ -1,4 +1,4 @@
-FROM os_base AS base
+FROM os_base:latest AS base
 
 SHELL ["/bin/bash", "-c"]
 

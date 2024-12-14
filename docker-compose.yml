@@ -4,13 +4,13 @@ name: "mkpanq"
 
 services:
   os_base:
-    pull-policy: if_not_present
+    image: os_base
     build:
       context: .
       dockerfile: Dockerfile.base
-    image: os_base
 
   app:
+    image: app
     build:
       context: .
       dockerfile: Dockerfile.app
@@ -18,4 +18,3 @@ services:
       - 3000:3000
     depends_on:
       - os_base
-    image: app
