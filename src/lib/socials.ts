@@ -13,16 +13,8 @@ const socials: SocialLink[] = [
     url: "https://github.com/mkpanq",
   },
   {
-    name: "twitterx",
-    url: "https://x.com/mkpanq",
-  },
-  {
-    name: "twitch",
-    url: "https://twitch.tv/mkpanq",
-  },
-  {
     name: "bluesky",
-    url: "https://bsky.app/profile/mkpanq.bsky.social",
+    url: "https://bsky.app/profile/mkpanq.com",
   },
 ];
 
